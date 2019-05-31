@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link type="text/css" rel="stylesheet" href="./app/jsmind/jsmind.css" />
-        <script type="text/javascript" src="./app/jsmind/jsmind.js"></script>
+        <link type="text/css" rel="stylesheet" href="jsmind.css" />
+        <script type="text/javascript" src="jsmind.js"></script>
     </head>
     <body>
         <div id="jsmind_container"></div>
 
         <script type="text/javascript">
             var mind = {
-                // 3 data formats were supported ...
+                // 3 data format supported ...
                 // see Documents for more information
             };
             var options = {
                 container:'jsmind_container',
-                theme:'orange',
-                editable:true
+                editable:true,
+                theme:'orange'
             };
             var jm = new jsMind(options);
             jm.show(mind);
