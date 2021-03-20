@@ -1,0 +1,43 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - .gitignore
+      - LICENSE
+      - README.md
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Build and Format html, css, js file
+        run: |
+          npm i -g js-beautify hexo-cli
+          npm i
+          for f in $(find ./public -type f | egrep "\.(html|css|js)$")
+          do
+            js-beautify -f ${f} -o ${f}
+          done
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_branch: gh-pages
+          cname: xhlr.top
+          force_orphan: true
+          commit_message: ${{ github.event.head_commit.message }}
