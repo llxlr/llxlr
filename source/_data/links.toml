@@ -1,0 +1,76 @@
+# 友链库
+# title: 标题
+# url: 链接
+# icon: 图标
+# description: 描述
+# type: 友链类型。activate: 正常，deactivate: 死链
+
+[link1]
+  title = ""
+  url = ""
+  icon = ""
+  description = ""
+  type = ""
+
+[link2]
+  title = ""
+  url = ""
+  icon = ""
+  description = ""
+  type = ""
+
+[link3]
+  title = ""
+  url = ""
+  icon = ""
+  description = ""
+  type = ""
+
+[link4]
+  title = ""
+  url = ""
+  icon = ""
+  description = ""
+  type = ""
+
+[link5]
+  title = ""
+  url = ""
+  icon = ""
+  description = ""
+  type = ""
+
+[link6]
+  title = ""
+  url = ""
+  icon = ""
+  description = ""
+  type = ""
+
+[link7]
+  title = ""
+  url = ""
+  icon = ""
+  description = ""
+  type = ""
+
+[link8]
+  title = ""
+  url = ""
+  icon = ""
+  description = ""
+  type = ""
+
+[link9]
+  title = ""
+  url = ""
+  icon = ""
+  description = ""
+  type = ""
+
+[link10]
+  title = ""
+  url = ""
+  icon = ""
+  description = ""
+  type = ""

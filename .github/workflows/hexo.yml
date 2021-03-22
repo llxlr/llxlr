@@ -26,8 +26,9 @@ jobs:
 
       - name: Build and Format html, css, js file
         run: |
-          npm i -g js-beautify hexo-cli
+          npm i -g npm js-beautify hexo-cli
           npm i
+          hexo g
           for f in $(find ./public -type f | egrep "\.(html|css|js)$")
           do
             js-beautify -f ${f} -o ${f}

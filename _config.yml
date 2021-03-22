@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 星海旅人
-subtitle: ''
+title: '星海旅人'
+subtitle: '梦里不觉秋已深，余情岂是为他人'
 description: ''
-keywords:
-author: 星旅人
-language: zh-CN
-timezone: Asia/Shanghai
+keywords: ''
+author: '星旅人'
+language: 'zh-CN'
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -41,12 +41,12 @@ external_link:
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
-relative_link: false
+relative_link: true
 future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace: ''
   wrap: true
   hljs: false
@@ -90,7 +90,7 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include:
+include: ['js', 'css', 'img']
 exclude:
 ignore:
 
@@ -103,6 +103,42 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+live2d:
+  enable: true
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  scriptFrom: jsdelivr
+  model:
+    use: https://cdn.jsdelivr.net/gh/ChenYFan/CDN@0.0.2/js/live2d-widget-model-z16/assets/z16.model.json
+  display:
+    position: left
+    width: 150
+    height: 300
+  mobile:
+    show: false
+
+baidusitemap:
+    path: baidusitemap.xml
+sitemap:
+    path: sitemap.xml
+baidu_url_submit:
+  count: 200
+  host: xhlr.top
+  token: QWQ
+  path: baidu_urls.txt 
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
 
 mathjax: true
 
