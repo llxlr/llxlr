@@ -1,10 +1,12 @@
 name: WakaTime
 
 on:
-  workflow_dispatch:
+  push:
+    - master
   schedule:
     # Runs at 00:00AM UTC
     - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -18,4 +20,4 @@ jobs:
           SHOW_OS: "True"
           SHOW_PROJECTS: "False"
           SHOW_LINES_OF_CODE: "True"
-          LOCALE: "zh_CN"
+          LOCALE: "en"
