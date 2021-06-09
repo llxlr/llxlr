@@ -24,83 +24,6 @@
 ### 
 
 <!--START_SECTION:waka-->
-![Profile Views](http://img.shields.io/badge/Profile%20Views-8-blue)
-
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-1.9%20million%20lines%20of%20code-blue)
-
-**🐱 My Github Data** 
-
-> 🏆 217 Contributions in the Year 2021
- > 
-> 📦 0 Bytes Used in Github's Storage 
- > 
-> 🚫 Not Opted to Hire
- > 
-> 📜 58 Public Repositories 
- > 
-> 🔑 0 Private Repositories  
- > 
-**I'm a Night 🦉** 
-
-```text
-🌞 Morning    44 commits     ██░░░░░░░░░░░░░░░░░░░░░░░   7.76% 
-🌆 Daytime    83 commits     ███░░░░░░░░░░░░░░░░░░░░░░   14.64% 
-🌃 Evening    185 commits    ████████░░░░░░░░░░░░░░░░░   32.63% 
-🌙 Night      255 commits    ███████████░░░░░░░░░░░░░░   44.97%
-
-```
-📅 **I'm Most Productive on Tuesday** 
-
-```text
-Monday       81 commits     ███░░░░░░░░░░░░░░░░░░░░░░   14.29% 
-Tuesday      144 commits    ██████░░░░░░░░░░░░░░░░░░░   25.4% 
-Wednesday    44 commits     ██░░░░░░░░░░░░░░░░░░░░░░░   7.76% 
-Thursday     76 commits     ███░░░░░░░░░░░░░░░░░░░░░░   13.4% 
-Friday       77 commits     ███░░░░░░░░░░░░░░░░░░░░░░   13.58% 
-Saturday     96 commits     ████░░░░░░░░░░░░░░░░░░░░░   16.93% 
-Sunday       49 commits     ██░░░░░░░░░░░░░░░░░░░░░░░   8.64%
-
-```
-
-
-📊 **This Week I Spent My Time On** 
-
-```text
-⌚︎ Time Zone: Asia/Shanghai
-
-💬 Programming Languages: 
-Python                   2 hrs 28 mins       ██████████████████░░░░░░░   74.24% 
-Text                     20 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   10.06% 
-C++                      19 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   9.78% 
-JSON                     11 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   5.9% 
-Other                    0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   0.02%
-
-🔥 Editors: 
-PyCharm                  2 hrs 48 mins       █████████████████████░░░░   84.3% 
-VS Code                  31 mins             ████░░░░░░░░░░░░░░░░░░░░░   15.7%
-
-💻 Operating System: 
-Windows                  3 hrs 19 mins       █████████████████████████   100.0%
-
-```
-
-**I Mostly Code in Python** 
-
-```text
-Python                   6 repos             ███████░░░░░░░░░░░░░░░░░░   28.57% 
-HTML                     4 repos             ████░░░░░░░░░░░░░░░░░░░░░   19.05% 
-JavaScript               4 repos             ████░░░░░░░░░░░░░░░░░░░░░   19.05% 
-Dockerfile               2 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   9.52% 
-Shell                    2 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   9.52%
-
-```
-
-
-**Timeline**
-
-![Chart not found](https://raw.githubusercontent.com/llxlr/llxlr/master/charts/bar_graph.png) 
-
-
 <!--END_SECTION:waka-->
 
 ### Platforms & tools
@@ -118,9 +41,9 @@ Shell                    2 repos             ██░░░░░░░░░�
   [![](https://img.shields.io/badge/-Fortran-734F96?style=flat-square&logo=fortran&logoColor=white)](https://fortran-lang.org/)
 <p align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=llxlr&theme=vue&layout=compact&hide_title=true"></p>
 
-- **Framework**:	[![](https://img.shields.io/badge/-PyTorch-ee4c2c?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/) [![](https://img.shields.io/badge/-Vue.js-4fc08d?style=flat-square&logo=vue-dot-js&logoColor=white)](https://vuejs.org/)
+- **Framework**:	[![](https://img.shields.io/badge/-PyTorch-ee4c2c?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/) [![](https://img.shields.io/badge/-TensorFlow-f38020?style=flat-square&logo=tensorflow&logoColor=white)](https://pytorch.org/) [![](https://img.shields.io/badge/-Vue.js-4fc08d?style=flat-square&logo=vue-dot-js&logoColor=white)](https://vuejs.org/)
 
-- **Software**:	[![](https://img.shields.io/badge/-LaTex-008080?style=flat-square&logo=latex&logoColor=white)](https://www.latex-project.org/) [![](https://img.shields.io/badge/-Node.js-43853d?style=flat-square&logo=node-dot-js&logoColor=white)](https://nodejs.org/) [![](https://img.shields.io/badge/-NPM-cb3837?style=flat-square&logo=npm&logoColor=white)](https://npmjs.com/) [![](https://img.shields.io/badge/-Miniconda-42B029?style=flat-square&logo=anaconda&logoColor=white)](https://conda.io/) [![](https://img.shields.io/badge/-Docker-2496ed?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/) [![](https://img.shields.io/badge/-Git-f05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com/)
+- **Software**:	[![](https://img.shields.io/badge/-LaTeX-008080?style=flat-square&logo=latex&logoColor=white)](https://www.latex-project.org/) [![](https://img.shields.io/badge/-Node.js-43853d?style=flat-square&logo=node-dot-js&logoColor=white)](https://nodejs.org/) [![](https://img.shields.io/badge/-NPM-cb3837?style=flat-square&logo=npm&logoColor=white)](https://npmjs.com/) [![](https://img.shields.io/badge/-Miniconda-42B029?style=flat-square&logo=anaconda&logoColor=white)](https://conda.io/) [![](https://img.shields.io/badge/-Docker-2496ed?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/) [![](https://img.shields.io/badge/-Git-f05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com/)
 
     [![](https://img.shields.io/badge/-Nginx-269539?style=flat-square&logo=nginx&logoColor=white)](https://nginx.org/)  [![](https://img.shields.io/badge/-MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white)](https://mariadb.com/) [![](https://img.shields.io/badge/-Redis-dc382d?style=flat-square&logo=redis&logoColor=white)](https://redis.io/)  [![](https://img.shields.io/badge/-Tor-7E4798?style=flat-square&logo=tor-project&logoColor=white)]() [![](https://img.shields.io/badge/-Tor%20browser-7D4698?style=flat-square&logo=tor-browser&logoColor=white)]()
 
