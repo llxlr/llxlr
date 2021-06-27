@@ -18,10 +18,8 @@
 
 ### TODO
 
-- [ ] Graduated from university
+- [x] Graduated from university
 - [ ]  Find a job to support myself
-
-### 
 
 <!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
@@ -41,9 +39,9 @@
   [![](https://img.shields.io/badge/-Fortran-734F96?style=flat-square&logo=fortran&logoColor=white)](https://fortran-lang.org/)
 <p align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=llxlr&theme=vue&layout=compact&hide_title=true"></p>
 
-- **Framework**:	[![](https://img.shields.io/badge/-PyTorch-ee4c2c?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/) [![](https://img.shields.io/badge/-TensorFlow-f38020?style=flat-square&logo=tensorflow&logoColor=white)](https://pytorch.org/) [![](https://img.shields.io/badge/-Vue.js-4fc08d?style=flat-square&logo=vue-dot-js&logoColor=white)](https://vuejs.org/)
+- **Framework**:	[![](https://img.shields.io/badge/-PyTorch-ee4c2c?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/) [![](https://img.shields.io/badge/-TensorFlow-f38020?style=flat-square&logo=tensorflow&logoColor=white)](https://pytorch.org/) [![](https://img.shields.io/badge/-Vue.js-4fc08d?style=flat-square&logo=vuedotjs&logoColor=white)](https://vuejs.org/)
 
-- **Software**:	[![](https://img.shields.io/badge/-LaTeX-008080?style=flat-square&logo=latex&logoColor=white)](https://www.latex-project.org/) [![](https://img.shields.io/badge/-Node.js-43853d?style=flat-square&logo=node-dot-js&logoColor=white)](https://nodejs.org/) [![](https://img.shields.io/badge/-NPM-cb3837?style=flat-square&logo=npm&logoColor=white)](https://npmjs.com/) [![](https://img.shields.io/badge/-Miniconda-42B029?style=flat-square&logo=anaconda&logoColor=white)](https://conda.io/) [![](https://img.shields.io/badge/-Docker-2496ed?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/) [![](https://img.shields.io/badge/-Git-f05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com/)
+- **Software**:	[![](https://img.shields.io/badge/-LaTeX-008080?style=flat-square&logo=latex&logoColor=white)](https://www.latex-project.org/) [![](https://img.shields.io/badge/-Node.js-43853d?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org/) [![](https://img.shields.io/badge/-NPM-cb3837?style=flat-square&logo=npm&logoColor=white)](https://npmjs.com/) [![](https://img.shields.io/badge/-Miniconda-42B029?style=flat-square&logo=anaconda&logoColor=white)](https://conda.io/) [![](https://img.shields.io/badge/-Docker-2496ed?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/) [![](https://img.shields.io/badge/-Git-f05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com/)
 
     [![](https://img.shields.io/badge/-Nginx-269539?style=flat-square&logo=nginx&logoColor=white)](https://nginx.org/)  [![](https://img.shields.io/badge/-MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white)](https://mariadb.com/) [![](https://img.shields.io/badge/-Redis-dc382d?style=flat-square&logo=redis&logoColor=white)](https://redis.io/)  [![](https://img.shields.io/badge/-Tor-7E4798?style=flat-square&logo=tor-project&logoColor=white)]() [![](https://img.shields.io/badge/-Tor%20browser-7D4698?style=flat-square&logo=tor-browser&logoColor=white)]()
 
