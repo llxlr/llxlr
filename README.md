@@ -1,6 +1,6 @@
 ## Hi,there 🖖
 
-[![Github Pages](https://github.com/llxlr/llxlr/actions/workflows/hugo.yml/badge.svg)](https://github.com/llxlr/llxlr/actions/workflows/hugo.yml)
+[![Github Pages](https://github.com/llxlr/llxlr/actions/workflows/hexo.yml/badge.svg)](https://github.com/llxlr/llxlr/actions/workflows/hexo.yml)
 [![WakaTime](https://github.com/llxlr/llxlr/actions/workflows/waka.yml/badge.svg)](https://github.com/llxlr/llxlr/actions/workflows/waka.yml)
 [![](https://img.shields.io/badge/dynamic/json?color=ff69b4&label=B%E7%AB%99%E5%85%B3%E6%B3%A8&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dbilibili%26queryKey%3D166791985)](https://space.bilibili.com/166791985)
 [![](https://img.shields.io/badge/dynamic/json?color=1da1f2&label=Twitter%E5%85%B3%E6%B3%A8&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dtwitter%26queryKey%3Djames_ya_)](https://twitter.com/james_ya_)
@@ -8,6 +8,7 @@
 ### About me
 
 <!--
+
 - 👯 
 - 🤔 
 - 💬 
