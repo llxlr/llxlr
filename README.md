@@ -22,9 +22,6 @@
 - [x] Graduated from university
 - [ ]  Find a job to support myself
 
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
-
 ### Platforms & tools
 
 <!-- https://simpleicons.org/ -->
@@ -48,6 +45,9 @@
     [![](https://img.shields.io/badge/-Git-f05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com/) [![](https://img.shields.io/badge/-Nginx-269539?style=flat-square&logo=nginx&logoColor=white)](https://nginx.org/)  [![](https://img.shields.io/badge/-MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white)](https://mariadb.com/) [![](https://img.shields.io/badge/-Redis-dc382d?style=flat-square&logo=redis&logoColor=white)](https://redis.io/)  [![](https://img.shields.io/badge/-Tor-7E4798?style=flat-square&logo=tor-project&logoColor=white)](https://www.torproject.org/) [![](https://img.shields.io/badge/-Tor%20browser-7D4698?style=flat-square&logo=tor-browser&logoColor=white)](https://www.torproject.org/)
 
 - **Service**:	 [![](https://img.shields.io/badge/-CloudFlare-f38020?style=flat-square&logo=cloudflare&logoColor=white)](https://www.cloudflare.com/)
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
 
 <p align="center">
   <a href="https://count.getloli.com/">
