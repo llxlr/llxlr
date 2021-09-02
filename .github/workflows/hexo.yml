@@ -24,11 +24,14 @@ jobs:
         with:
           node-version: 14.x
 
+      - name: Install dependencies
+        run: |
+          #git submodule update --init --recursive
+          npm i -g yarn
+          yarn global add js-beautify hexo-cli
+          yarn
       - name: Build and Format html, css, js file
         run: |
-          git submodule update --init --recursive
-          npm i -g npm js-beautify hexo-cli
-          npm i
           hexo clean
           hexo g
           for f in $(find ./public -type f | egrep "\.(html|css|js)$")

@@ -1,3 +1,3 @@
-[submodule "themes/sakura"]
-	path = themes/sakura
-	url = git@github.com:honjun/hexo-theme-sakura.git
+[submodule "themes/shoka"]
+	path = themes/shoka
+	url = git@github.com:amehime/hexo-theme-shoka.git
