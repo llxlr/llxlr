@@ -26,6 +26,6 @@
     "hexo-server": "^2.0.0",
     "hexo-symbols-count-time": "^0.7.1",
     "hexo-util": "^2.4.0",
-    "js-yaml": "3.14.1"
+    "js-yaml": "4.1.0"
   }
 }
