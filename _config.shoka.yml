@@ -1,7 +1,7 @@
 # 站点配置
-alternate: 星海旅人 # 站点别称
+alternate: "" # 站点别称
 keywords: "博客,blog" # 站点关键词，用 “,” 分隔
-statics: //cdn.jsdelivr.net/gh/llxlr/llxlr@gh-pages/ # 静态文件目录，默认 /
+statics: / #//cdn.jsdelivr.net/gh/llxlr/llxlr@gh-pages/ # 静态文件目录，默认 /
 darkmode: true # 夜间模式
 auto_scroll: true # 自动定位
 
@@ -71,7 +71,9 @@ menu:
     categories: /categories/ || th
     tags: /tags/ || tags
   friends: /friends/ || heart
-  links: /links/ || magic
+  links:
+    persion: /links/ || magic
+    toys: /toys/ || star
 
 # 社交按钮
 social:
