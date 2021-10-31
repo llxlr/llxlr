@@ -44,6 +44,6 @@ jobs:
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           publish_branch: gh-pages
-          cname: xhlr.top
+          cname: blog.xhlr.top
           force_orphan: true
           commit_message: ${{ github.event.head_commit.message }}
