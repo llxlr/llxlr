@@ -76,13 +76,13 @@ Sunday       30 commits     █░░░░░░░░░░░░░░░░�
 ⌚︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-Other                    1 min               █████████████████████████   100.0%
+No Activity Tracked This Week
 
 🔥 Editors: 
-Sublime Text             1 min               █████████████████████████   100.0%
+No Activity Tracked This Week
 
 💻 Operating System: 
-Windows                  1 min               █████████████████████████   100.0%
+No Activity Tracked This Week
 
 ```
 
@@ -99,7 +99,7 @@ Stylus                   1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 12/11/2021
+ Last Updated on 13/11/2021
 <!--END_SECTION:waka-->
 
 <p align="center">
