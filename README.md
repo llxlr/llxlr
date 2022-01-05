@@ -1,5 +1,7 @@
 ## Hi,there 🖖
 
+<img align='right' src='https://cdn.jsdelivr.net/gh/llxlr/llxlr/.github/bg.png' width='300px'>
+
 [![WakaTime](https://github.com/llxlr/llxlr/actions/workflows/waka.yml/badge.svg)](https://github.com/llxlr/llxlr/actions/workflows/waka.yml)
 
 ### About me
