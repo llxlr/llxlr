@@ -1,6 +1,6 @@
 ## Hi,there 🖖
 
-<img align='right' src='https://cdn.jsdelivr.net/gh/llxlr/llxlr/.github/bg.png' width='300px'>
+<img align='right' src='https://cdn.jsdelivr.net/gh/llxlr/llxlr/.github/bg.png' width='100px'>
 
 [![WakaTime](https://github.com/llxlr/llxlr/actions/workflows/waka.yml/badge.svg)](https://github.com/llxlr/llxlr/actions/workflows/waka.yml)
 
