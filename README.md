@@ -99,6 +99,6 @@ Dockerfile               1 repo              █░░░░░░░░░░�
 
 <p align="center">
   <a href="https://count.getloli.com/">
-    <img src="https://count.getloli.com/get/@github.llxlr.readme??theme=asoul" alt="github.llxlr.readme">
+    <img src="https://count.getloli.com/get/@github.llxlr.readme?theme=asoul" alt="github.llxlr.readme">
   </a>
 </p>
