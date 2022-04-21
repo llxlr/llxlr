@@ -14,7 +14,7 @@ jobs:
         uses: MajorScruffy/delete-workflow-runs@main
         id: delete-workflow-runs
         with:
-          repository: llxlr/blog
+          repository: llxlr/llxlr
           older-than-seconds: 86400
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
