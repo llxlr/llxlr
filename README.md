@@ -8,8 +8,10 @@
 
 ### TODO
 
+<!--
 - [x] Graduated from university
 - [ ]  Find a job to support myself
+-->
 
 ### Platforms & tools
 
