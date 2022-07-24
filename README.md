@@ -36,7 +36,7 @@
 - **Service**:	 [![](https://img.shields.io/badge/-CloudFlare-f38020?style=flat-square&logo=cloudflare&logoColor=white)](https://www.cloudflare.com/)
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue)
+![Code Time](http://img.shields.io/badge/Code%20Time-1%2C457%20hrs%2012%20mins-blue)
 
 **I'm a Night 🦉** 
 
@@ -95,7 +95,7 @@ Shell                    2 repos             ██░░░░░░░░░�
 
 
 
- Last Updated on 23/07/2022 20:09:29 UTC
+ Last Updated on 24/07/2022 00:39:01 UTC
 <!--END_SECTION:waka-->
 
 <p align="center">
