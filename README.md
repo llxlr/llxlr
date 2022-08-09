@@ -35,6 +35,9 @@
 
 - **Service**:	 [![](https://img.shields.io/badge/-CloudFlare-f38020?style=flat-square&logo=cloudflare&logoColor=white)](https://www.cloudflare.com/)
 
+
+<details>
+<summary><h3>WakaTime</h3></summary>
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue)
 
@@ -97,6 +100,7 @@ Shell                    2 repos             ██░░░░░░░░░�
 
  Last Updated on 07/08/2022 00:40:15 UTC
 <!--END_SECTION:waka-->
+</details>
 
 <p align="center">
   <a href="https://count.getloli.com/">
