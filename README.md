@@ -39,7 +39,7 @@
 <details>
 <summary><h3>WakaTime</h3></summary>
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-158%20hrs%2030%20mins-blue)
+![Code Time](http://img.shields.io/badge/Code%20Time-403%20hrs%2028%20mins-blue)
 
 **I'm a Night 🦉** 
 
@@ -70,16 +70,13 @@ Sunday       43 commits     ███░░░░░░░░░░░░░░�
 ⌚︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-TeX                      1 hr 22 mins        ██████████████░░░░░░░░░░░   58.0% 
-Markdown                 54 mins             █████████░░░░░░░░░░░░░░░░   38.23% 
-OpenEdge ABL             5 mins              █░░░░░░░░░░░░░░░░░░░░░░░░   3.77%
+No Activity Tracked This Week
 
 🔥 Editors: 
-VS Code                  1 hr 28 mins        ███████████████░░░░░░░░░░   61.77% 
-Sublime Text             54 mins             █████████░░░░░░░░░░░░░░░░   38.23%
+No Activity Tracked This Week
 
 💻 Operating System: 
-Windows                  2 hrs 23 mins       █████████████████████████   100.0%
+No Activity Tracked This Week
 
 ```
 
@@ -96,7 +93,7 @@ Shell                    2 repos             ██░░░░░░░░░�
 
 
 
- Last Updated on 18/08/2022 00:37:42 UTC
+ Last Updated on 19/08/2022 00:36:46 UTC
 <!--END_SECTION:waka-->
 </details>
 
