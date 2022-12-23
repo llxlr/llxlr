@@ -58,15 +58,13 @@ Sunday       52 commits     ███░░░░░░░░░░░░░░�
 ⌚︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-TeX                      1 hr 34 mins        ████████████████████░░░░░   83.09% 
-JSON                     17 mins             ███░░░░░░░░░░░░░░░░░░░░░░   15.37% 
-Other                    1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   1.54%
+No Activity Tracked This Week
 
 🔥 Editors: 
-Sublime Text             1 hr 54 mins        █████████████████████████   100.0%
+No Activity Tracked This Week
 
 💻 Operating System: 
-Windows                  1 hr 54 mins        █████████████████████████   100.0%
+No Activity Tracked This Week
 
 ```
 
@@ -83,7 +81,7 @@ Shell                    2 repos             ██░░░░░░░░░�
 
 
 
- Last Updated on 22/12/2022 00:31:35 UTC
+ Last Updated on 23/12/2022 00:30:02 UTC
 <!--END_SECTION:waka-->
 </details>
 
