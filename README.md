@@ -58,13 +58,13 @@ Sunday          55 commits       ███░░░░░░░░░░░░�
 ⌚︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-TeX                      1 hr 5 mins         █████████████████████████   100.00 % 
+No Activity Tracked This Week
 
 🔥 Editors: 
-VS Code                  1 hr 5 mins         █████████████████████████   100.00 % 
+No Activity Tracked This Week
 
 💻 Operating System: 
-Windows                  1 hr 5 mins         █████████████████████████   100.00 % 
+No Activity Tracked This Week
 
 ```
 
@@ -81,7 +81,7 @@ Shell                    2 repos             ██░░░░░░░░░�
 
 
 
- Last Updated on 13/02/2023 00:34:45 UTC
+ Last Updated on 14/02/2023 00:33:15 UTC
 <!--END_SECTION:waka-->
 </details>
 
