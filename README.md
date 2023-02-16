@@ -58,13 +58,13 @@ Sunday          55 commits       ███░░░░░░░░░░░░�
 ⌚︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-No Activity Tracked This Week
+SQL                      28 mins             █████████████████████████   100.00 % 
 
 🔥 Editors: 
-No Activity Tracked This Week
+Sublime Text             28 mins             █████████████████████████   100.00 % 
 
 💻 Operating System: 
-No Activity Tracked This Week
+Windows                  28 mins             █████████████████████████   100.00 % 
 
 ```
 
@@ -81,7 +81,7 @@ Shell                    2 repos             ██░░░░░░░░░�
 
 
 
- Last Updated on 15/02/2023 00:33:01 UTC
+ Last Updated on 16/02/2023 00:33:37 UTC
 <!--END_SECTION:waka-->
 </details>
 
