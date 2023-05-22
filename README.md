@@ -1,4 +1,4 @@
-## Hi,there 🖖
+## Hi, There 🖖
 
 <img align='right' src='https://cdn.jsdelivr.net/gh/llxlr/llxlr/.github/bg.png' width='100px'>
 
@@ -8,12 +8,14 @@
 
 ### TODO
 
-<!--
-- [x] Graduated from university
-- [ ]  Find a job to support myself
--->
+- [x] Graduated From University
+- [x] Make A Living
+- [ ] Learn Ukulele
+- [ ] No Porn, No Plitics Only History
+- [x] Freedom & Equality
+- [ ] Happy Life
 
-### Platforms & tools
+### Platforms & Tools
 
 <!-- https://simpleicons.org/ -->
 
@@ -49,7 +51,6 @@ Saturday                 121 commits         ████░░░░░░░�
 Sunday                   90 commits          ███░░░░░░░░░░░░░░░░░░░░░░   10.75 % 
 ```
 
-
 📊 **This Week I Spent My Time On** 
 
 ```text
@@ -80,10 +81,7 @@ TeX                      2 repos             ██░░░░░░░░░�
 PowerShell               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.33 % 
 ```
 
-
-
-
- Last Updated on 22/05/2023 00:31:25 UTC
+Last Updated on 22/05/2023 00:31:25 UTC
 <!--END_SECTION:waka-->
 </details>
 
