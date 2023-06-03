@@ -10,7 +10,7 @@
 
 - [x] Graduated From University
 - [x] Make A Living
-- [ ] Learn Ukulele
+- [x] Learn Ukulele
 - [ ] No Porn, No Plitics Only History
 - [ ] Daydream
 - [x] Freedom & Equality
