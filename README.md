@@ -14,6 +14,7 @@
 - [ ] No Porn, No Plitics Only History
 - [ ] Daydream
 - [x] Freedom & Equality
+- [ ] Healthy LifeStyle
 - [ ] Happy Life
 
 ### Platforms & Tools
