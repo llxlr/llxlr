@@ -12,6 +12,7 @@
 - [x] Make A Living
 - [ ] Learn Ukulele
 - [ ] No Porn, No Plitics Only History
+- [ ] Daydream
 - [x] Freedom & Equality
 - [ ] Happy Life
 
