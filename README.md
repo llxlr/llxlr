@@ -11,7 +11,8 @@
 - [x] Graduated From University
 - [x] Make A Living
 - [x] Learn Ukulele
-- [ ] No Porn, No Plitics Only History
+- [ ] No Porn
+- [ ] No Plitics Only History
 - [ ] Daydream
 - [x] Freedom & Equality
 - [ ] Healthy & Happy Life
