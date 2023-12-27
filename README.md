@@ -13,7 +13,7 @@
 - [x] Learn Ukulele
 - [ ] No Porn
 - [ ] No Plitics Only History
-- [ ] Daydream
+- [x] Daydream
 - [x] Freedom & Equality
 - [ ] Healthy & Happy Life
 
