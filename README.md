@@ -31,7 +31,7 @@
 <details>
 <summary><h3>WakaTime</h3></summary>
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-3%2C003%20hrs%2029%20mins-blue)
+![Code Time](http://img.shields.io/badge/Code%20Time-3%2C012%20hrs%206%20mins-blue)
 
 **I'm a Night 🦉** 
 
@@ -60,13 +60,13 @@ Sunday                   125 commits         ██░░░░░░░░░�
 🕑︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-Other                    43 hrs 16 mins      █████████████████████████   100.00 % 
+Other                    39 hrs 27 mins      █████████████████████████   100.00 % 
 
 🔥 Editors: 
-Edge                     43 hrs 16 mins      █████████████████████████   100.00 % 
+Edge                     39 hrs 27 mins      █████████████████████████   100.00 % 
 
 💻 Operating System: 
-Windows                  43 hrs 16 mins      █████████████████████████   100.00 % 
+Windows                  39 hrs 27 mins      █████████████████████████   100.00 % 
 ```
 
 **I Mostly Code in Python** 
@@ -82,7 +82,7 @@ Lua                      1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 13/04/2024 00:24:59 UTC
+ Last Updated on 14/04/2024 00:33:49 UTC
 <!--END_SECTION:waka-->
 </details>
 
