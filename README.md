@@ -31,7 +31,7 @@
 <details>
 <summary><h3>WakaTime</h3></summary>
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-3%2C051%20hrs%2058%20mins-blue)
+![Code Time](http://img.shields.io/badge/Code%20Time-3%2C053%20hrs%2016%20mins-blue)
 
 **I'm a Night 🦉** 
 
@@ -82,7 +82,7 @@ Lua                      1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 21/04/2024 00:32:03 UTC
+ Last Updated on 22/04/2024 00:30:44 UTC
 <!--END_SECTION:waka-->
 </details>
 
