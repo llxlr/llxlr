@@ -31,7 +31,7 @@
 <details>
 <summary><h3>WakaTime</h3></summary>
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-3%2C380%20hrs%2059%20mins-blue)
+![Code Time](http://img.shields.io/badge/Code%20Time-3%2C387%20hrs%2038%20mins-blue)
 
 **I'm a Night 🦉** 
 
@@ -60,13 +60,13 @@ Sunday                   107 commits         ███░░░░░░░░�
 🕑︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-Other                    25 hrs 3 mins       █████████████████████████   100.00 % 
+Other                    27 hrs 53 mins      █████████████████████████   100.00 % 
 
 🔥 Editors: 
-Edge                     25 hrs 3 mins       █████████████████████████   100.00 % 
+Edge                     27 hrs 53 mins      █████████████████████████   100.00 % 
 
 💻 Operating System: 
-Windows                  25 hrs 3 mins       █████████████████████████   100.00 % 
+Windows                  27 hrs 53 mins      █████████████████████████   100.00 % 
 ```
 
 **I Mostly Code in Python** 
@@ -82,7 +82,7 @@ PowerShell               1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 26/06/2024 00:31:58 UTC
+ Last Updated on 27/06/2024 00:32:11 UTC
 <!--END_SECTION:waka-->
 </details>
 
