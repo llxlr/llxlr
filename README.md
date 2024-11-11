@@ -31,6 +31,8 @@
 <details>
 <summary><h3>WakaTime</h3></summary>
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-3%2C859%20hrs%2037%20mins-blue)
+
 **I'm a Night 🦉** 
 
 ```text
@@ -81,7 +83,7 @@ PowerShell               1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 10/11/2024 00:41:04 UTC
+ Last Updated on 11/11/2024 00:39:30 UTC
 <!--END_SECTION:waka-->
 </details>
 
