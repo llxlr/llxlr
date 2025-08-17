@@ -1,0 +1,15 @@
+name: 'Auto WakeUp LeanCLoud'
+
+on:
+  watch:
+    types: [started]
+  schedule:
+    - cron: '*/30 6-23 * * ?'   # 北京时间 6:00-23:00，每 30 分钟触发一次
+
+jobs:
+  wakeup:
+     runs-on: ubuntu-latest
+     steps:
+       - name: '向站点发送 GET 请求'
+         run: |
+           curl ${{ secrets.SITE }}
