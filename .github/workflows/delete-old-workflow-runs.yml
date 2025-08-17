@@ -16,6 +16,6 @@ jobs:
         id: delete-workflow-runs
         with:
           repository: llxlr/llxlr
-          older-than-seconds: 7200
+          older-than-seconds: 3600
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
