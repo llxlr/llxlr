@@ -2,8 +2,6 @@
 
 <img align='right' src='https://cdn.jsdelivr.net/gh/llxlr/llxlr/.github/bg.png' width='100px'>
 
-[![WakaTime](https://github.com/llxlr/llxlr/actions/workflows/waka.yml/badge.svg)](https://github.com/llxlr/llxlr/actions/workflows/waka.yml)
-
 ### About me
 
 ### TODO
@@ -27,6 +25,8 @@
 
 ![](https://github-readme-stats.vercel.app/api?username=llxlr&include_all_commits=true&show_icons=true&hide_title=true&hide_border=true)
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=llxlr&theme=vue&layout=compact&hide_title=true&hide_border=true)
+
+[![WakaTime](https://github.com/llxlr/llxlr/actions/workflows/waka.yml/badge.svg)](https://github.com/llxlr/llxlr/actions/workflows/waka.yml)
 
 <details>
 <summary><h3>WakaTime</h3></summary>
