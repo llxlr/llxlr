@@ -31,6 +31,8 @@
 <details>
 <summary><h3>WakaTime</h3></summary>
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-5%2C181%20hrs%204%20mins-blue)
+
 **I Mostly Code in Python** 
 
 ```text
@@ -44,7 +46,7 @@ Vue                      1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 23/09/2025 00:42:06 UTC
+ Last Updated on 24/09/2025 00:42:41 UTC
 <!--END_SECTION:waka-->
 </details>
 
