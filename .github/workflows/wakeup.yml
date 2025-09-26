@@ -12,4 +12,5 @@ jobs:
      steps:
        - name: '向站点发送 GET 请求'
          run: |
-           curl ${{ secrets.SITE }}
+           curl ${{ secrets.SITE }} >/dev/null 2>&1
+           if [ $? -eq 0 ]; then echo "请求成功"; else echo "请求失败"; fi
