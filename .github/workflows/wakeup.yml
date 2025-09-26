@@ -1,6 +1,7 @@
 name: 'Auto WakeUp LeanCLoud'
 
 on:
+  workflow_dispatch:
   watch:
     types: [started]
   schedule:
