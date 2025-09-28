@@ -1,8 +1,16 @@
 ## Hi, There 🖖
 
-<img align='right' src='https://cdn.jsdelivr.net/gh/llxlr/llxlr/.github/bg.png' width='100px'>
+<img src='https://cdn.jsdelivr.net/gh/llxlr/llxlr/.github/bg.png' align='right' width='100px'>
 
 ### About me
+
+<img src="./.github/icon/character.svg" align='left' height="135">
+
+- 🌍 外向性: 28%
+- 🔮 直觉性: 92%
+- ❤️ 情感性: 96%
+- 🧠 判断性: 35%
+- 🌪️ 动荡性: 88%
 
 ### TODO
 
