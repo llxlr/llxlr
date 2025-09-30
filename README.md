@@ -6,11 +6,11 @@
 
 <img src="./.github/icon/character.svg" align='left' height="135">
 
-- 🌍 外向性: 28%
-- 🔮 直觉性: 92%
-- ❤️ 情感性: 96%
-- 🧠 判断性: 35%
-- 🌪️ 动荡性: 88%
+- 🌍 Extraversion: 28%
+- 🔮 Intuition: 92%
+- ❤️ Feeling: 96%
+- 🧠 Judging: 35%
+- 🌪️ Turbulence: 88%
 
 ### TODO
 
