@@ -1,0 +1,936 @@
+<!-- build time:Mon Jun 15 2026 01:06:40 GMT+0800 (China Standard Time) --><!DOCTYPE html><html lang="zh-CN"><head><link rel="manifest" href="/manifest.json"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#57faff"><meta itemprop="name" content="白色相簿"><meta itemprop="image" content="https://white-album.top/images/favicon.ico"><meta name="description" itemprop="description" content="梦里不觉秋已深，余情岂是为他人"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="白色相簿" href="https://white-album.top/rss.xml"><link rel="alternate" type="application/atom+xml" title="白色相簿" href="https://white-album.top/atom.xml"><link rel="alternate" type="application/json" title="白色相簿" href="https://white-album.top/feed.json"><link rel="stylesheet" href="//fonts.geekzu.org/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/css/app.css?v=0.2.5"><meta name="keywords" content="python,pipx"><link rel="canonical" href="https://white-album.top/computer-science/python/poetry/"><title>poetry 管理项目 - Python - 计算机科学 | White Album = 白色相簿 = 梦里不觉秋已深，余情岂是为他人</title><script async src="https://www.googletagmanager.com/gtag/js?id=UA-126485680-4"></script><script>function gtag(){dataLayer.push(arguments)}function _evt_push(a,t,e){gtag("event",a,{event_category:t,event_label:e})}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-126485680-4")</script><script>let HEXO_MMEDIA_DATA = { js: [], css: [], aplayerData: [], metingData: [], artPlayerData: [], dplayerData: []};</script><script async src="https://events.vercount.one/js"></script><script src="//at.alicdn.com/t/c/font_2045605_x1fgi2gg8x.js"></script><script type="text/javascript" src="https://player.dogecloud.com/js/loader"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"><script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script><script src="//cdn.jsdelivr.net/gh/llxlr/live2d-widget@dev/autoload.min.js"></script><script src="//pv.sohu.com/cityjson?ie=utf-8"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.css" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.js" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script><style type="text/css">.moequote{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}.moequote blockquote{border:0;background-color:transparent}.moequote p{font-size:20px;padding:0;white-space:pre-wrap}.moequote p[lang=zh]{font-family:SimHei,sans-serif;font-style:normal}.moequote p[lang=ja]{font-family:initial;font-style:normal}.moequote .body{z-index:1;position:relative;margin:0;padding:10px 30px;font-family:Georgia,serif;font-size:16px;font-style:italic;line-height:140%;color:#888}.moequote .body::after,.moequote .body::before{z-index:-1;position:absolute;color:#d2d2d2;font-size:32px;font-style:normal;font-weight:700}.moequote .body::before{content:"“";color:#b2b7f2;top:0;left:0;line-height:1;font-size:40px;font-family:'Times New Roman',sans-serif;font-weight:700;text-align:left}.moequote .body::after{content:"”";color:#b2b7f2;bottom:0;right:0;line-height:0;font-size:40px;font-family:'Times New Roman',sans-serif;font-weight:700;text-align:right}.moequote .credits{margin-left:24px;padding-right:24px;color:#8c8c8c;font-size:14px}figcaption::before{content:"—";color:#418ae0;padding-right:5px;font-style:normal;font-weight:400}cite{font-style:normal;font-weight:400;background-image:-o-linear-gradient(225deg,#dc8bc3 0,#418ae0 100%);background-image:linear-gradient(-135deg,#dc8bc3 0,#418ae0 100%);background-image:-ms-linear-gradient(-135deg,#dc8bc3 0,#418ae0 100%);-webkit-text-fill-color:transparent;-webkit-background-clip:text}.moequote-slg{color:#4ea1d9;position:relative;display:inline-block;width:calc(100% - .76rem);padding:.2rem;margin:.64rem;font-weight:lighter;letter-spacing:.1em}.moequote-slg.pureColor{background:0 0;pointer-events:none}.moequote-slg.pureColor em{background:0 0;-webkit-background-clip:none}.moequote-slg strong{color:#74d5ee;font-weight:inherit}.moequote-slg em{color:#418ae0;font-style:normal;background-image:-o-linear-gradient(225deg,#dc8bc3 0,#418ae0 100%);background-image:linear-gradient(-135deg,#dc8bc3 0,#418ae0 100%);-webkit-text-fill-color:transparent;-webkit-background-clip:text}.moequote-slg u{color:#dc8bc3;text-decoration:none}.moequote-slg::after,.moequote-slg::before{content:"";position:absolute;width:.08rem;height:.25rem;background-repeat:0;background-size:cover;background-position:center center}.moequote-slg .anim{background-image:-o-linear-gradient(225deg,#418ae0,#56a0d8,#dc8bc3,#56a0d8,#418ae0,#56a0d8,#dc8bc3,#56a0d8,#418ae0);background-image:linear-gradient(-135deg,#418ae0,#56a0d8,#dc8bc3,#56a0d8,#418ae0,#56a0d8,#dc8bc3,#56a0d8,#418ae0);background-image:-ms-linear-gradient(-135deg,#418ae0,#56a0d8,#dc8bc3,#56a0d8,#418ae0,#56a0d8,#dc8bc3,#56a0d8,#418ae0);-webkit-text-fill-color:transparent;-webkit-background-clip:text;background-size:200% 100%;-webkit-animation:masked-animation 3s infinite linear;animation:masked-animation 3s infinite linear}@-webkit-keyframes masked-animation{0%{background-position:0 -100%}100%{background-position:-100% 0}}@keyframes masked-animation{0%{background-position:0 -100%}100%{background-position:-100% 0}}</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-shoka-swiper@0.1.8/lib/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-shoka-swiper@0.1.8/lib/swiperstyle.css"><meta name="generator" content="Hexo 8.1.2"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">poetry 管理项目</h1><div class="meta"><span class="item" title="创建时间：2022-04-12 19:42:47"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2022-04-12T19:42:47+08:00">2022-04-12</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>12k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>11 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">White Album</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://www.loliapi.com/acg?626207"></li><li class="item" data-background-image="https://www.loliapi.com/acg?132604"></li><li class="item" data-background-image="https://www.loliapi.com/acg?947882"></li><li class="item" data-background-image="https://www.loliapi.com/acg?689783"></li><li class="item" data-background-image="https://www.loliapi.com/acg?810558"></li><li class="item" data-background-image="https://www.loliapi.com/acg?921845"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span><i class="ic i-angle-right"></i> <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/" itemprop="item" rel="index" title="分类于 计算机科学"><span itemprop="name">计算机科学</span></a><meta itemprop="position" content="1"></span><i class="ic i-angle-right"></i> <span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/python/" itemprop="item" rel="index" title="分类于 Python"><span itemprop="name">Python</span></a><meta itemprop="position" content="2"></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://white-album.top/computer-science/python/poetry/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/avatar.jpg"><meta itemprop="name" content="星旅人"><meta itemprop="description" content="梦里不觉秋已深，余情岂是为他人, Hexo 生成的静态博客站点"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="白色相簿"></span><div class="body md" itemprop="articleBody"><div class="ai-summary"><div class="ai-head"><div class="ai-head-left"><div class="ai-circle ai-circle-1"></div><div class="ai-circle ai-circle-2"></div><div class="ai-circle ai-circle-3"></div></div><div class="ai-head-right"><a class="ai-about-ai" target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.liushen.fun/posts/40702a0d/" data-pjax-state="">关于 AI</a></div></div><div class="ai-explanation" style="display:block" data-summary="这里是 DeepSeek R1，这篇文章详细介绍了如何使用 poetry 管理 Python 项目依赖项，它以 pyproject.toml 替代传统的 requirements.txt 作为核心配置文件。首先说明了通过 pipx 安装 poetry，包括配置设置如查询或更新选项。重点讲解在项目中的应用：使用 new 或 init 命令创建或初始化项目目录结构；通过 install 安装依赖项时区分有无 poetry.lock 文件的处理策略，并手动配置 virtualenvs.in-project 确保虚拟环境在项目内创建；同时覆盖常用命令如 add 添加自定义依赖项、remove 删除包、update 更新版本、run 在虚拟环境中执行命令以及 check 验证文件结构。针对常见问题如依赖源不兼容，提供了添加北外镜像解决方案；还详细描述了如何添加 - D 开发依赖、poetry.lock 的作用及适用场景、添加程序执行入口脚本。最后通过完整实例演示项目搭建流程，从初始化依赖到运行可执行文件，强调 poetry 在持续管理依赖中的优势。">AI 正在绞尽脑汁想思路 ING···</div><div class="ai-title"><div class="ai-title-left"><i class="ic i-snowflake"></i><div class="ai-title-text">AI 摘要</div></div><div class="ai-tag" id="ai-tag">DeepSeek V4 Pro</div></div></div><h2 id="pyproject-toml-替代-requirements-txt"><a class="anchor" href="#pyproject-toml-替代-requirements-txt">§</a> pyproject.toml 替代 requirements.txt</h2><p>通过 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.cnblogs.com/aifengqi/p/freelycode.com">pyproject.toml</a> 进行依赖包管理。目前 pip 还不支持，所以 poetry 是首选。</p><pre><code>首先pytest、black、isort等常用工具都支持pyproject.toml了，可以实现一个文件完成全项目的配置。
+其次pyproject.toml是PEP中的内容，是将来的方向。
+```
+
+越来越多的开源下项目使用 pyproject.toml。
+
+## 安装 poetry
+
+可以使用 Python 自带的 pip 工具来安装，但是这里使用 pipx 来安装
+
+```bash
+pipx install poetry 
+  installed package poetry 1.1.4, Python 3.9.0
+  These apps are now globally available
+    - poetry.exe
+done!
+```
+
+安装成功后，使用pipx检查安装效果
+
+```bash
+pipx list
+venvs are in C:\Users\san\.local\pipx\venvs
+apps are exposed on your $PATH at C:\Users\san\.local\bin
+   package poetry 1.1.4, Python 3.9.0
+    - poetry.exe
+```
+
+检查一下是否安装成功
+
+```bash
+poetry
+Poetry version 1.1.10
+
+USAGE
+  poetry [-h] [-q] [-v [&lt;...&gt;]] [-V] [--ansi] [--no-ansi] [-n] &lt;command&gt; [&lt;arg1&gt;] ... [&lt;argN&gt;]
+
+ARGUMENTS
+  &lt;command&gt;              The command to execute
+  &lt;arg&gt;                  The arguments of the command
+
+GLOBAL OPTIONS
+  -h (--help)            Display this help message
+  .......
+```
+
+自此，poetry就已经安装好了。
+
+我们是通过pipx安装的poetry，日后也可以通过pipx 更新poetry:
+
+```bash
+pipx upgrade poetry
+```
+
+### 配置设置
+
+查询当前所有配置：
+
+```bash
+poetry config list
+cache-dir = &quot;/home/$user/.cache/pypoetry&quot;
+experimental.new-installer = true
+installer.parallel = true
+virtualenvs.create = true
+virtualenvs.in-project = null
+virtualenvs.path = &quot;{cache-dir}/virtualenvs&quot;  # /home/$user/.cache/pypoetry/virtualenvs
+```
+
+查询单个配置
+
+```bash
+poetry config virtualenvs.path 
+```
+
+添加或者更新配置
+
+```bash
+poetry config virtualenvs.in-project true 
+```
+
+删除配置
+
+```bash
+poetry config virtualenvs.path --unset 
+```
+
+查看可用软件包
+
+根据 poetry.lock 列出所有可用的软件包，并不是根据 pyproject.toml 文件的 [tool.poetry.dependencies]
+
+```bash
+poetry show
+```
+
+查看某个包的详细信息
+
+```bash
+$ poetry show fastapi 
+name         : fastapi
+version      : 0.61.2
+description  : FastAPI framework, high performance, easy to learn, fast to code, ready for production
+
+dependencies
+ - pydantic &gt;=1.0.0,&lt;2.0.0
+ - starlette 0.13.6
+```
+
+**options**
+
+```
+--no-dev：不要列出开发依赖项
+
+--tree：树的形式列出依赖项
+
+--latest (-l)：显示最新版本
+--outdated (-o)：显示最新版本，但仅适用于过时的软件包
+```
+
+## 在项目中使用 poetry
+
+### 新建项目
+
+**new**
+
+&gt; 通过创建适合大多数项目的目录结构来启动新的Python项目
+
+```bash
+poetry new my-package 
+```
+
+my-package 是路径，默认目录结构：
+
+```bash
+tree .
+.
+├── pyproject.toml         # poetry 用于管理项目的 all-in-one 配置文档.
+├── README.rst             # 说明文档
+├── my_package             # poetry 会帮你将包名调整为下划线格式.
+│   └── __init__.py        # 请在该目录下编写你的业务逻辑.
+└── tests                  # 测试模块.
+    ├── __init__.py               
+    └── test_my_package.py
+```
+
+它有如下参数：
+
+```
+	OPTIONS
+	  --name           Set the resulting package name.自定义项目名称
+      --src            Use the src layout for the project.  使用 src 目录
+```
+
+比如创建一个名字为my-folder的项目,并使用src目录：
+
+```bash
+poetry new my-folder --name my-package  --src
+```
+
+目录结构
+
+```
+my-folder
+├── pyproject.toml
+├── README.rst
+├── src
+│   └── my_package
+│       └── __init__.py
+└── tests
+    ├── __init__.py
+    └── test_my_package.py
+```
+
+### 4.2初始化一个项目
+
+**poetry init**
+
+&gt; 如果想在已存在的 Python 项目使用 poetry，可以用 init 命令，poetry 会以交互方式创建 pyproject.toml 文件
+
+在项目的根目录，执行poetry是， 并一路回车
+
+```bash
+poetry init
+```
+
+```bash
+This command will guide you through creating your pyproject.toml config.
+
+Package name [apipractice]:
+Version [0.1.0]:
+Description []: 
+Author []:
+License []:
+Compatible Python versions [^3.9]:
+
+Would you like to define your main dependencies interactively? (yes/no) [yes]
+You can specify a package in the following forms:
+  - A single name (requests)
+  - A name and a constraint (requests@^2.23.0)
+  - A git url (git+https://github.com/python-poetry/poetry.git)
+  - A git url with a revision (git+https://github.com/python-poetry/poetry.git#develop)
+  - A file path (../my-package/my-package.whl)
+  - A directory (../my-package/)
+  - A url (https://example.com/packages/my-package-0.1.0.tar.gz)
+
+Search for package to add (or leave blank to continue):
+
+Would you like to define your development dependencies interactively? (yes/no) [yes]
+Search for package to add (or leave blank to continue):
+
+Generated file
+[tool.poetry]
+name = &quot;apipractice&quot;
+version = &quot;0.1.0&quot;
+description = &quot;&quot;
+authors = [&quot;$user &lt;email@github.com&gt;&quot;] 
+
+[tool.poetry.dependencies]
+python = &quot;^3.9&quot;
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = [&quot;poetry-core&gt;=1.0.0&quot;]
+build-backend = &quot;poetry.core.masonry.api&quot;
+
+Do you confirm generation? (yes/no) [yes]
+```
+
+在Do you confirm generation? (yes/no) [yes] 后按下回车之后，将会在当前目录生成pyproject.toml，内容如下
+
+```bash
+[tool.poetry]
+name = &quot;apipractice&quot;    # 项目名称，默认会填写当前目录的名称
+version = &quot;0.1.0&quot;       # 默认版本
+description = &quot;&quot;        # 对本项目简单的描述
+authors = [&quot;$user &lt;email@github.com&gt;&quot;]  
+
+[tool.poetry.dependencies]
+python = &quot;^3.9&quot;       # 版本依赖包括python版本和第三方库
+
+[tool.poetry.dev-dependencies]  # 开发模式下依赖的第三方库
+
+[build-system]  # 默认构建项目时使用的内容，一般不用改
+requires = [&quot;poetry-core&gt;=1.0.0&quot;]
+build-backend = &quot;poetry.core.masonry.api&quot;
+```
+
+我是一只回车没有自己输入东西的
+options
+
+```
+--name：包的名称
+--description：包的描述
+--author：包的作者
+--python：兼容的 Python 版本
+--dependency：需要具有版本约束的包，格式 foo:1.0.0
+--dev-dependency：开发需求
+```
+
+生成 pyproject 已有的字段 和 options 是可以对齐的
+
+### 安装依赖
+
+&gt; 从当前项目读取 pyproject.toml 文件，解析依赖项 [tool.poetry.dependencies] 并安装它们
+
+```bash
+poetry install
+```
+
+&gt; 如果当前目录中**有 poetry.lock 文件**，它将使用其中的确切版本，而不是解析它们， 这确保使用库的每个人都将获得相同版本的依赖项
+&gt; 如果**没有 poetry.lock 文件**，poetry 将在依赖项解析后创建一个
+
+**重点**
+
+默认会安装 [tool.poetry.dependencies] 和 [tool.poetry.dev-dependencies] 下所有强制安装的(不带 optional)依赖项
+它有如下参数
+
+```
+--no-dev    	不安装开发依赖项 [tool.poetry.dev-dependencies] 
+
+poetry install --no-dev
+
+--remove-untracked	移除 poetry.lock 文件中不再存在的旧依赖项
+
+poetry install --remove-untracked
+
+-E|--extras	指定安装的包
+
+poetry install --extras
+
+--no-root	不要安装根目录包
+
+poetry install  	--no-root	
+```
+
+同时，记得上面提到的这个参数
+
+&gt; poetry config virtualenvs.in-project true
+
+&gt; 如果没有设置，可以配置一下，但是最好的方法是在项目目录下创建一个文件poetry.toml，写下如下内容：
+
+```bash
+[virtualenvs]
+in-project = true
+```
+
+这样能够保证，在使用poetry安装依赖文件时自动创建虚拟环境。
+然后使用的时候执行下面命令激活虚拟环境
+
+```bash
+source .venv/bin/activate
+```
+
+### 其他命令
+
+#### **update**
+
+&gt; 获取所有依赖项的最新版本并更新 poetry.lock 文件
+
+```bash
+poetry update
+```
+
+指定依赖项进行更新
+
+```bash
+poetry update requests toml
+```
+
+options
+
+```
+--dry-run ：输出操作，但不执行操作
+--no-dev : 不安装开发依赖项
+--lock：不执行安装，仅更新 poetry.lock 文件
+```
+
+#### **add**
+
+&gt; 将所需要的包添加到 pyproject.toml 的 [tool.poetry.dependencies] 下面，并安装他们
+&gt; 未指定版本的话，则 poetry 会自动选择合适的版本
+
+```bash
+poetry add requests pendulum
+```
+
+**注意**
+
+&gt; 默认不会将包添加到 [tool.poetry.dev-dependencies] 下，若需要得用 --dev 参数
+&gt; 指定版本
+
+```bash
+poetry add pendulum@^2.0.5
+poetry add &quot;pendulum&gt;=2.0.5&quot;
+```
+
+获取最新的版本
+
+```bash
+poetry add pendulum@latest
+```
+
+添加 github 依赖项
+
+```bash
+poetry add git+https://github.com/sdispater/pendulum.git
+```
+
+添加 github 依赖项，指定分支
+
+```bash
+poetry add git+https://github.com/sdispater/pendulum.git#develop
+poetry add git+https://github.com/sdispater/pendulum.git#2.0.5
+```
+
+通过本地目录、文件进行安装
+
+```bash
+poetry add ./my-package/
+poetry add ../my-package/dist/my-package-0.1.0.tar.gz
+poetry add ../my-package/dist/my_package-0.1.0.whl
+```
+
+以可编辑模式安装依赖项
+
+&gt; 在 pyproject.toml 文件指定，意味着本地目录中的更改会直接反映在环境中
+
+```bash
+[tool.poetry.dependencies]
+my-package = {path = &quot;../my/path&quot;, develop = true}
+```
+
+options
+
+```
+--dev (-D)：将包添加为开发依赖项
+--path：指定依赖项的路径
+--optional：作为可选依赖项添加
+--dry-run：输出操作，不执行任何操作
+--lock：不执行安装，仅更新 poetry.lock 文件
+```
+
+#### remove
+
+从已安装包列表删除指定包
+
+```bash
+poetry remove pendulum
+```
+
+```
+options
+
+    --dev(-D)：从开发依赖项中删除包
+    --dry-run：输出操作，不执行任何操作
+```
+
+#### show
+
+&gt; 根据 poetry.lock 列出所有可用的软件包，并不是根据 pyproject.toml 文件的 [tool.poetry.dependencies]
+
+```bash
+poetry show
+```
+
+查看某个包的详细信息
+
+```bash
+poetry show fastapi  
+```
+
+options
+
+```
+--no-dev：不要列出开发依赖项
+
+--tree：树的形式列出依赖项
+
+--latest (-l)：显示最新版本
+--outdated (-o)：显示最新版本，但仅适用于过时的软件包
+```
+
+#### run
+
+&gt; 在项目的 virtualenv 中执行指定的命令
+
+```bash
+poetry run python -V
+```
+
+还可以执行 pyproject.toml 中定义的脚本
+
+```
+[tool.poetry.scripts]
+my_script = &quot;my_module:main&quot;
+```
+
+执行 shell
+
+```bash
+poetry run my_script
+```
+
+显式激活当前虚拟环境，会自动调用虚拟环境下的激活命令
+
+如果不存在虚拟环境，会自动创建一个
+
+#### check
+
+&gt; 验证 pyproject.toml 文件的结构，并在出现任何错误时返回详细报告
+
+```bash
+poetry check
+```
+
+#### search
+
+&gt; 在远程库上搜索包
+
+```bash
+poetry search requests
+```
+
+#### lock
+
+&gt; 将所有依赖项锁定为最新的可用兼容版本
+
+```bash
+poetry lock
+```
+
+#### version
+
+&gt; 显示项目的当前版本
+
+是 pyproject.toml 文件的 version 哦
+
+#### export
+
+&gt; 将锁文件导出为其他格式
+
+```bash
+poetry export -f requirements.txt --output requirements.txt
+```
+
+options
+
+```
+--format (-f)：要导出的格式(默认值：requirements.txt)目前，仅支持requirements.txt
+--output (-o)：输出文件的名称，如果省略，则打印到标准输出
+--dev(-D)：从开发依赖项中删除包
+--extras (-E)：要包含的额外依赖项集
+--without-hashes：从导出的文件中排除散列
+--with-credentials：包括用于额外索引的凭据
+```
+
+#### env
+
+&gt; 管理虚拟环境，具体教程看：https://www.cnblogs.com/poloyy/p/15270670.html
+&gt; cache
+
+#### build
+
+&gt; 生成源文件
+
+```bash
+poetry build
+```
+
+#### publish
+
+&gt; 将使用 build 命令生成的包发布到远程存储库
+
+```bash
+poetry publish
+```
+
+options
+
+```
+--repository (-r)：要将包注册到的存储库(默认值：pypi)应与config命令设置的存储库名称匹配
+--username (-u)：访问存储库的用户名
+--password (-p)：访问存储库的密码
+--dry-run：执行除上传包以外的所有操作
+```
+
+## 使用过程中遇到的问题
+
+### 依赖源的问题
+
+添加依赖的命令
+
+```
+poetry add &lt;pakge_name&gt;
+```
+
+但是有些不好用
+
+```bash
+poetry add fastapi[all]
+Using version ^0.63.0 for fastapi
+
+Updating dependencies
+Resolving dependencies...
+
+  ConnectionError
+
+  HTTPSConnectionPool(host='files.pythonhosted.org', port=443): Max retries exceeded with url: /packages/f4/2b/078a9771ae4b67e36b0c2a973df845260833a4eb088b81c84b738509b4c4/aiofiles-0.5.0-py3-none-any.whl (Caused by NewConnectionError('
+&lt;urllib3.connection.HTTPSConnection object at 0x0000021BE6355250&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+  at c:\users\admin\.local\pipx\venvs\poetry\lib\site-packages\requests\adapters.py:516 in send
+      512│             if isinstance(e.reason, _SSLError):
+      513│                 # This branch is for urllib3 v1.22 and later.
+      514│                 raise SSLError(e, request=request)
+      515│
+    → 516│             raise ConnectionError(e, request=request)
+      517│
+      518│         except ClosedPoolError as e:
+      519│             raise ConnectionError(e, request=request)
+      520│
+```
+
+从错误提示来看，从其他源下载文件，所以出现了网络错误。
+
+这是poetry已经被吐槽很多次的问题了。。。
+
+**解决办法：**
+
+pyproject.toml 文件中添加北外镜像：
+
+```bash
+[[tool.poetry.source]]
+name = &quot;tsinghua&quot;
+url = &quot;https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/&quot;
+default = true  # 添加一个 default 参数, 使 poetry 的默认回调行为都调用到这个镜像上
+```
+
+参考:
+
+&gt; https://github.com/python-poetry/poetry/issues/559
+&gt; https://python-poetry.org/docs/repositories/#disabling-the-pypi-repository
+
+### 添加开发依赖
+
+默认情况下，`poetry`所添加的依赖是在运行这个项目时所需要的一些包，但是在我们开发的时候，其实还需要一些工具进行配合。
+
+比如说测试框架`pytest`，如果单纯是为了启动这个项目的话，其实是不需要进行安装的。
+
+所以把这些在运行时不需要安装，在开发时所需要安装的依赖我们称之为开发依赖。
+
+安装开发依赖的方式很简单，就是加一个`-D`参数
+
+```bash command:(&quot;$&quot;:1)
+poetry add -D pytest
+Using version ^6.2.2 for pytest
+
+Updating dependencies
+Resolving dependencies...
+
+Writing lock file
+
+Package operations: 9 installs, 0 updates, 0 removals
+
+  • Installing pyparsing (2.4.7)
+  • Installing atomicwrites (1.4.0)
+  • Installing attrs (20.3.0)
+  • Installing iniconfig (1.1.1)
+  • Installing packaging (20.9)
+  • Installing py (1.10.0)
+  • Installing pluggy (0.13.1)
+  • Installing toml (0.10.2)
+  • Installing pytest (6.2.2)
+```
+
+然后我们运行pytest执行测试。
+
+有两种方式来验证：
+
+第一种：先进入虚拟环境，然后执行pytest
+
+```bash
+poetry shell
+pytest
+```
+
+第二种：让pytest在虚拟环境中执行
+
+```bash
+poetry run pytest
+   
+=============== 29 passed in 1.13s ===============
+```
+
+### 什么时候使用 poetry.lock，什么时候不使用？
+
+&gt; 多数人以及要发布模块到 pypi 的人不需要 poetry.lock; 通过 Version Control 进行协作的开发团队以及对他机部署环境要求非常严格的人则需要放入 poetry.lock.
+
+poetry.lock 的意义在于, 它会彻底 “锁死” 项目依赖的版本,
+
+比如我们在 pyproject.toml 中要求的依赖版本是`requests = &quot;^2.24.0&quot;`，
+
+那么哪怕 requests 的作者后面发布了 2.24.1, 使用 poetry.lock 安装时仍会选择安装 2.24.0 版本.
+
+因此, poetry.lock 帮助我们彻底杜绝因依赖的版本的微小变化而产生的任何不确定性.
+
+补充说明:
+
+如需使用 poetry.lock, 请将它伴随项目一起打包发布, 在执行 poetry install 时它会优先查找 lock 文件。
+
+你可以通过 poetry update 来更新所有依赖到最新版本, 同时 poetry.lock 也会锁定到新的依赖版本。
+
+当 pyproject.toml 中所列的依赖与 poetry.lock 不匹配时, poetry install 会中断并提示该错误。
+
+### 为项目添加执行入口
+
+&gt; 我们可以将项目启动的命令，或者启动入口写为脚本，然后加入到配置文件中，然后文件执行 poetry install 操作时，就会将项目编译为可执行文件了
+
+```bash
+[tool.poetry.scripts]
+package-transformer = &quot;newapi.test:main&quot;
+```
+
+这里注意格式，`package-transformer`是编译生成的可执行目标文件，方便以后运行使用
+
+`newapi.test:main`是程序执行的如可文件和函数名
+
+## 实例
+
+现在新的项目已经使用`poetry`和`pyproject.toml`来进行管理了。
+
+```bash
+poetry new newtest --name newapi
+```
+
+```bash
+[tool.poetry]
+name = &quot;newapi&quot;
+version = &quot;0.1.0&quot;
+description = &quot;&quot;
+authors = [&quot;Dummy&quot;]
+
+[tool.poetry.dependencies]
+python = &quot;^3.8&quot;
+
+[tool.poetry.dev-dependencies]
+pytest = &quot;^5.2&quot;
+
+# 程序执行入口
+[tool.poetry.scripts]
+  test-package = &quot;newapi.main:main&quot;
+
+# 添加清华源，防止构建依赖时因为网络问题不能构建成功
+[[tool.poetry.source]]
+name = &quot;tsinghua&quot;
+url = &quot;https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/&quot;
+default = true  # 添加一个 default 参数, 使 poetry 的默认回调行为都调用到
+
+[build-system]
+requires = [&quot;poetry-core&gt;=1.0.0&quot;]
+build-backend = &quot;poetry.core.masonry.api&quot;
+```
+
+`main`文件：
+
+```python
+import time
+import os
+
+def test():
+   print('hello word')
+   print(time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;,time.localtime()))
+
+def main(**kwargs):
+   &quot;&quot;&quot;Entry point &quot;&quot;&quot;
+   test()
+   print(os.getcwd())
+   time.sleep(10)
+   print('test end after 10s')
+
+if __name__ == &quot;__main__&quot;:
+    main()
+```
+
+现在项目结构如下：‘
+
+```bash
+ newtest
+    ├── pyproject.toml              # poetry 用于管理项目的 all-in-one 配置文档.
+    ├── README.rst                  # 说明文档
+       ├── newapi               # poetry 会帮你将包名调整为下划线格式.
+    │    ├──__init__.py             # 请在该目录下编写你的业务逻辑.
+    │   └── main.py              
+    └── tests                       # 测试模块.
+        ├── __init__.py               
+        └── test_my_package.py
+```
+
+够构建环境
+
+```bash
+poetry install
+```
+
+激活虚拟环境
+
+```bash
+poetry shell
+```
+
+根据构建的程序入口运行程序
+
+```bash
+test-package
+```
+
+回顾发现，poetry 在开始做了几件件事：
+
+1. 初始化`pyproject.toml`
+2. 构建主程序入口
+3. 修改配置文件，增加程序入口和修改镜像源
+4. 创建虚拟环境
+5. 构建下载相关依赖
+6. 根据配置信息生成可执行入口
+
+之后，主要负责`管理依赖`
+</code></pre><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><script src="https://fastly.jsdelivr.net/npm/d3@7"></script><script src="https://fastly.jsdelivr.net/npm/markmap-view@0.18.10"></script><script src="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10"></script><link rel="stylesheet" href="/css/markmap.css"><script src="/js/markmap.js"></script><div class="tags"><a href="/tags/python/" rel="tag"><i class="ic i-tag"></i> python</a> <a href="/tags/pipx/" rel="tag"><i class="ic i-tag"></i> pipx</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span id="twikoo_visitors"></span> <span class="text">次</span></span></div><div class="reward"><button><i class="ic i-heartbeat"></i> 赞赏</button><p>请我喝[茶]~(￣▽￣)~*</p><div id="qr"><div><img data-src="/images/wechatpay.png" alt="星旅人 微信支付"><p>微信支付</p></div><div><img data-src="/images/alipay.png" alt="星旅人 支付宝"><p>支付宝</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>星旅人 <i class="ic i-at"><em>@</em></i>白色相簿</li><li class="link"><strong>本文链接：</strong> <a href="https://white-album.top/computer-science/python/poetry/" title="poetry 管理项目">https://white-album.top/computer-science/python/poetry/</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"></div><div class="item right"></div></div><hr style="margin:.5rem"><span style="margin-left:1rem"><i class="ic i-info-circle"></i>在提问之前，你应该学会<a style="color:var(--primary-color)" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md">如何提问</a></span><hr style="margin:.5rem"><div class="wrap" id="tcomments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pyproject-toml-%E6%9B%BF%E4%BB%A3-requirements-txt"><span class="toc-number">1.</span> <span class="toc-text">pyproject.toml 替代 requirements.txt</span></a></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/computer-science/python/conda/" rel="bookmark" title="使用 Conda 配置 Python 环境">使用 Conda 配置 Python 环境</a></li><li><a href="/computer-science/python/pipx/" rel="bookmark" title="pipx 管理程序">pipx 管理程序</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="星旅人" data-src="/images/avatar.jpg"><p class="name" itemprop="name">星旅人</p><div class="description" itemprop="description">Hexo 生成的静态博客站点</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">49</span> <span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">13</span> <span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">60</span> <span class="name">标签</span></a></div></nav><div class="social"><span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xseGxy" title="https:&#x2F;&#x2F;github.com&#x2F;llxlr"><i class="ic i-github"></i></span> <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9qYW1lc195YV8=" title="https:&#x2F;&#x2F;twitter.com&#x2F;james_ya_"><i class="ic i-twitter"></i></span> <span class="exturl item email" data-url="bWFpbHRvOmlAeGhsci50b3A=" title="mailto:i@xhlr.top"><i class="ic i-envelope"></i></span> <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS94bHI=" title="https:&#x2F;&#x2F;about.me&#x2F;xlr"><i class="ic i-address-card"></i></span></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>关于</a></li><li class="item dropdown"><a href="javascript:void(0);" rel="external nofollow noreferrer"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heartbeat"></i>友链</a></li><li class="item dropdown"><a href="javascript:void(0);" rel="external nofollow noreferrer"><i class="ic i-th"></i>列表</a><ul class="submenu"><li class="item"><a href="/treehole/" rel="section"><i class="ic i-treehole"></i>树洞</a></li><li class="item"><a href="/links/" rel="section"><i class="ic i-magic"></i>链接</a></li><li class="item"><a href="/toys/" rel="section"><i class="ic i-toys"></i>玩具</a></li><li class="item"><a href="/bangumi/" rel="section"><i class="ic i-sakura"></i>追番</a></li><li class="item"><a href="/cinema/" rel="section"><i class="ic i-film"></i>追剧</a></li><li class="item"><a href="/games/" rel="section"><i class="ic i-gamepad"></i>游戏</a></li></ul></li><li class="item"><span class="exturl" data-url="aHR0cHM6Ly90cmF2ZWwubW9lL2dvLmh0bWw/dHJhdmVsPW9u"><i class="ic i-planet"></i>萌站</span></li></ul></div></div></div><ul id="quick"><li class="prev pjax"></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"></div><span><a href="/posts/persuasion-of-learning/" title="劝学">劝学</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a></div><span><a href="/computer-science/mathematica/mma-keygen/" title="Wolfram Mathematica 11&#x2F;12&#x2F;13 注册码在线生成器">Wolfram Mathematica 11/12/13 注册码在线生成器</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a></div><span><a href="/computer-science/linux-selenium/" title="Linux配置Selenium">Linux配置Selenium</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/physics/" title="分类于 物理学">物理学</a> <i class="ic i-angle-right"></i> <a href="/categories/physics/quantum-mechanics/" title="分类于 量子力学">量子力学</a></div><span><a href="/physics/quantum-mechanics/chapter-1/" title="第一章 量子力学诞生">第一章 量子力学诞生</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a></div><span><a href="/computer-science/git/git-filter-repo/" title="Git 脱敏">Git 脱敏</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a></div><span><a href="/computer-science/zotero/" title="Zotero 文献管理">Zotero 文献管理</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/inter-disciplinary/" title="分类于 交叉学科">交叉学科</a> <i class="ic i-angle-right"></i> <a href="/categories/inter-disciplinary/quantum-computing/" title="分类于 量子计算">量子计算</a></div><span><a href="/inter-disciplinary/quantum-computing/silq/documentation/" title="Silq 文档">Silq 文档</a></span></li><li class="item"><div class="breadcrumb"></div><span><span class="exturl" data-url="aHR0cHM6Ly9zdHVkeS4xNjMuY29tL2NvdXJzZS9jb3Vyc2VNYWluLmh0bT9jb3Vyc2VJZD0xMjA4ODk0ODE4JnNoYXJlPTEmc2hhcmVJZD0xMDI4NDI4ODE2" title="深度学习与 PyTorch 入门实战">深度学习与 PyTorch 入门实战<i class="ic i-link-alt"></i></span></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/hexo/hello-world/" title="Hello World">Hello World</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/inter-disciplinary/" title="分类于 交叉学科">交叉学科</a> <i class="ic i-angle-right"></i> <a href="/categories/inter-disciplinary/quantum-computing/" title="分类于 量子计算">量子计算</a></div><span><a href="/inter-disciplinary/quantum-computing/silq/comparison/" title="与 Q# 比较">与 Q# 比较</a></span></li></ul></div><div class="pjax"><h2>最新评论</h2><ul class="leancloud-recent-comment" id="twikoo_comment"></ul></div></div><div class="status"><div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2026</span> <span class="with-love"><i class="ic i-snowflake flip"></i> </span><span class="author" itemprop="copyrightHolder">星旅人 @ White Album</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">312k 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">4:44</span> <span id="busuanzi_container_site_pv"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-eye"></i> </span><span id="busuanzi_value_site_pv" title="本站总访问量"></span>次 </span><span id="busuanzi_container_site_uv"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-user"></i> </span><span id="busuanzi_value_site_uv" title="本站总访客数"></span>人次</span></div><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></div><div class="beian"><span><i class="ic i-police1 police"></i> </span><span title="公安备案"><span class="exturl" data-url="aHR0cHM6Ly9iZWlhbi5tcHMuZ292LmNuLyMvcXVlcnkvd2ViU2VhcmNoP2NvZGU9MzcxMzIzMDIwMDA0MjM=">鲁公网安备37132302000423号</span></span> <span><i><svg class="icp" aria-hidden="true"><use xlink:href="#i-icp"></use></svg> </i></span><span title="ICP备案"><span class="exturl" data-url="aHR0cHM6Ly9iZWlhbi5taWl0Lmdvdi5jbg==">鲁ICP备2025189196号</span></span> <span><i class="ic i-moe moe"></i> </span><span title="萌备案"><span class="exturl" data-url="aHR0cHM6Ly9pY3AuZ292Lm1vZS8/a2V5d29yZD0yMDI1MTMxMg==">萌ICP备20251312号</span></span></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"computer-science/python/poetry/",favicon:{show:"（●´3｀●）复活成功",hide:"(´Д｀)浏览器崩溃啦！"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},twikoo:!0,fancybox:!0,heti:!1,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',outime:!0,template:'<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>',label:{table:"表",figure:"图"},ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://polyfill.alicdn.com/polyfill.min.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="/js/app.js?v=0.2.5"></script><script data-pjax>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?4b4d40795c0f59cca3bc8ae5289aafaf";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script src="/assets/mmedia/mmedia-loader.js"></script><script src="/assets/js/test.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><script data-pjax>let pan = document.getElementsByClassName('pan');for (let i = 0; i < pan.length; i++) {let code = pan[i].getAttribute('data-code');let link = pan[i].getAttribute('data-link');if (!code && !link) continue;pan[i].addEventListener('click', function(){window.setTimeout(function(){if (code) copyCode(code, link);window.open(link, '_blank');}, 3000);});}function copyCode(code) {let input = document.createElement('input');input.value = code;document.body.appendChild(input);input.select();document.execCommand('Copy');input.className = 'input';input.style.display = 'none';};</script><style>.code-toolbar{position:relative}.code-toolbar>.toolbar{position:absolute;z-index:10;top:.3em;right:.2em;opacity:0;transition:opacity .3s ease-in-out}.code-toolbar:focus-within>.toolbar,.code-toolbar:hover>.toolbar{opacity:1}.code-toolbar>.toolbar>.toolbar-item{display:inline-block}.code-run-btn{background:0 0;border:1px solid var(--grey-4);border-radius:3px;color:var(--grey-6);cursor:pointer;padding:0 8px;font-size:12px;line-height:20px;transition:background .2s,color .2s;user-select:none}.code-run-btn:hover{background:var(--grey-2);color:var(--grey-8)}.code-runner-output{padding:10px 14px;background:var(--grey-1);border-top:1px solid var(--grey-4);font-family:Menlo,Monaco,Consolas,monospace;font-size:14px;white-space:pre-wrap;display:none;max-height:300px;overflow-y:auto}.code-runner-sandbox{width:100%;height:200px;border:none}</style><script type="module" data-pjax>// 注册运行按钮（通过 Prism toolbar 插件，每次 Pjax 都调用，toolbar 内部幂等）
+if (typeof Prism !== 'undefined' && Prism.plugins && Prism.plugins.toolbar) {
+  Prism.plugins.toolbar.registerButton('run-code', function (env) {
+    const pre = env.element;
+    const figure = pre.closest('figure.highlight');
+    if (!figure || !figure.hasAttribute('data-runnable')) return;
+
+    const btn = document.createElement('button');
+    btn.className = 'code-run-btn';
+    btn.title = '运行代码';
+    btn.textContent = '▶ Run';
+    return btn;
+  });
+}
+
+(function () {
+  // 仅注册一次事件委托，用事件代理兼容 Pjax 导航
+  if (window.__runnerInited) return;
+  window.__runnerInited = true;
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.code-run-btn');
+    if (!btn) return;
+    e.preventDefault();
+
+    var fig = btn.closest('figure.highlight');
+    if (!fig) return;
+
+    var lang = fig.getAttribute('data-runnable') || 'js';
+    var rawEl = fig.querySelector('.code-raw');
+    var code = '';
+    if (rawEl) {
+      try { code = JSON.parse(rawEl.textContent); } catch (err) { code = rawEl.textContent; }
+    }
+
+    // 查找或创建输出区域
+    var output = fig.querySelector('.code-runner-output');
+    if (!output) {
+      output = document.createElement('div');
+      output.className = 'code-runner-output';
+      fig.appendChild(output);
+    }
+    output.innerHTML = '';
+    output.style.display = 'block';
+
+    // 执行逻辑
+    try {
+      if (lang === 'js' || lang === 'javascript') {
+        var logs = [];
+        var fakeConsole = { log: function () { logs.push([].slice.call(arguments).join(' ')); } };
+        var result = new Function('console', code)(fakeConsole);
+        var lines = logs.slice();
+        if (result !== undefined) lines.push('=> ' + String(result));
+        output.textContent = lines.join('\n') || '(no output)';
+      } else if (lang === 'silq' || lang === 'slq') {
+        import init, { run_silq, run_silq_dump } from "./silq.js";
+
+        // ========== WASM 初始化 ==========
+        const statusEl = document.getElementById("wasmStatus");
+        const allBtns = document.querySelectorAll(".run-code-btn");
+
+        try {
+            await init();
+            statusEl.textContent = "✓ WASM 模块就绪";
+            statusEl.className = "wasm-status ready";
+            allBtns.forEach((b) => (b.disabled = false));
+        } catch (err) {
+            statusEl.textContent = "✗ WASM 加载失败: " + err.message;
+            statusEl.style.color = "#e06c75";
+        }
+
+        // ========== 绑定所有代码块 ==========
+        document.querySelectorAll(".code-toolbar").forEach((toolbar) => {
+            const editor = toolbar.querySelector(".code-editor");
+            const pre = editor.querySelector("pre");
+            const codeEl = pre.querySelector("code");
+            const textarea = editor.querySelector("textarea");
+            const runBtn = toolbar.querySelector(".run-code-btn");
+            const output = toolbar.querySelector(".code-output");
+            const outputCode = output.querySelector("code");
+
+            // 初始同步
+            textarea.value = codeEl.textContent;
+
+            // 输入 → 高亮
+            textarea.addEventListener("input", () => {
+            codeEl.textContent = textarea.value;
+            Prism.highlightElement(codeEl);
+            });
+
+            // 滚动同步
+            textarea.addEventListener("scroll", () => {
+            pre.scrollTop = textarea.scrollTop;
+            pre.scrollLeft = textarea.scrollLeft;
+            });
+
+            // Tab 缩进
+            textarea.addEventListener("keydown", (e) => {
+            if (e.key === "Tab") {
+                e.preventDefault();
+                const s = textarea.selectionStart;
+                const ed = textarea.selectionEnd;
+                textarea.value =
+                textarea.value.slice(0, s) + "  " + textarea.value.slice(ed);
+                textarea.selectionStart = textarea.selectionEnd = s + 2;
+                textarea.dispatchEvent(new Event("input"));
+            }
+            if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
+                e.preventDefault();
+                runBtn.click();
+            }
+            });
+
+            // ========== 运行按钮 ==========
+            runBtn.addEventListener("click", async (e) => {
+            const code = textarea.value.trim();
+            if (!code) return;
+
+            if (runBtn.disabled) return;
+
+            const useDump = e.shiftKey; // Shift+点击 → run_silq_dump
+
+            runBtn.classList.add("running");
+            const title = runBtn.title;
+            runBtn.title = useDump ? "执行中 (dump 模式)…" : "执行中…";
+
+            await new Promise((r) => setTimeout(r, 80));
+
+            try {
+                const result = useDump ? run_silq_dump(code) : run_silq(code);
+                outputCode.textContent = result;
+                output.className = "code-output success show";
+                runBtn.classList.add("done");
+            } catch (err) {
+                outputCode.textContent = "✗ " + (err.message || err);
+                output.className = "code-output error show";
+            } finally {
+                runBtn.classList.remove("running");
+                runBtn.title = title;
+                setTimeout(() => runBtn.classList.remove("done"), 1000);
+            }
+            });
+        });
+      } else {
+        output.textContent = '[Execution not supported for "' + lang + '"]';
+      }
+    } catch (err) {
+      output.textContent = 'Error: ' + err.message;
+    }
+  });
+})();</script><script data-pjax>!function(){var e="/",r=location.pathname,s="/page/,/about/,/friends/".split(",");if(!s.some(function(e){return r.indexOf(e)!==-1})&&("all"===e||e===r)){var i=document.getElementsByClassName("index wrap")[0];if(i&&!i.querySelector(".blog-slider")&&(console.log("已挂载shoka_swiper"),i.insertAdjacentHTML("afterbegin",'<h2 class="divider swiper">推广链接</h2><div class="segments swiper"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide pjax" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(`https://study.163.com/course/courseMain.htm?courseId=1209092816&share=1&shareId=1028428816`);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="深度学习与 TensorFlow 2 入门实战"><img width="48" height="48" data-src="https://cdn1.white-album.top/img/2020/02/17/21xx9kn.jpg" alt="" onerror="this.src=/images/error.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-02-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(`https://study.163.com/course/courseMain.htm?courseId=1209092816&share=1&shareId=1028428816`);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="深度学习与 TensorFlow 2 入门实战">深度学习与 TensorFlow 2 入门实战</a><div class="blog-slider__text">新加坡国立大学研究员主讲</div></div></div><div class="blog-slider__item swiper-slide pjax" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(`https://study.163.com/course/courseMain.htm?courseId=1208894818&share=1&shareId=1028428816`);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="深度学习与 PyTorch 入门实战"><img width="48" height="48" data-src="https://cdn1.white-album.top/img/2020/02/17/72a30l.png" alt="" onerror="this.src=/images/error.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-02-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(`https://study.163.com/course/courseMain.htm?courseId=1208894818&share=1&shareId=1028428816`);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="深度学习与 PyTorch 入门实战">深度学习与 PyTorch 入门实战</a><div class="blog-slider__text">新加坡国立大学研究员主讲</div></div></div><div class="blog-slider__item swiper-slide pjax" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(`computer-science/python/conda/`);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="使用 Conda 配置 Python 环境"><img width="48" height="48" data-src="" alt="" onerror="this.src=/images/error.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2021-10-10</span><a class="blog-slider__title" onclick="pjax.loadUrl(`computer-science/python/conda/`);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="使用 Conda 配置 Python 环境">使用 Conda 配置 Python 环境</a><div class="blog-slider__text">使用 Conda 配置 Python 环境</div></div></div><div class="blog-slider__item swiper-slide pjax" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(`computer-science/latex/latex-feynman/`);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="在 LaTeX 中绘制费曼图"><img width="48" height="48" data-src="" alt="" onerror="this.src=/images/error.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-03-10</span><a class="blog-slider__title" onclick="pjax.loadUrl(`computer-science/latex/latex-feynman/`);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="在 LaTeX 中绘制费曼图">在 LaTeX 中绘制费曼图</a><div class="blog-slider__text">在 LaTeX 中绘制费曼图</div></div></div><div class="blog-slider__item swiper-slide pjax" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(`computer-science/latex/install-and-setup/`);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="LaTeX 环境配置"><img width="48" height="48" data-src="" alt="" onerror="this.src=/images/error.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-08-16</span><a class="blog-slider__title" onclick="pjax.loadUrl(`computer-science/latex/install-and-setup/`);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="LaTeX 环境配置">LaTeX 环境配置</a><div class="blog-slider__text">LaTeX 环境配置</div></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>'),window.Swiper)){window.swiper&&window.swiper.destroy&&(window.swiper.destroy(!0,!0),window.swiper=null);var a=document.querySelector(".blog-slider");if(a){window.swiper=new Swiper(".blog-slider",{passiveListeners:!0,spaceBetween:30,effect:"fade",loop:!0,autoplay:{disableOnInteraction:!0,delay:3e3},mousewheel:!0,pagination:{el:".blog-slider__pagination",clickable:!0}});var l=document.getElementById("swiper_container");l&&(l.onmouseenter=function(){window.swiper.autoplay.stop()},l.onmouseleave=function(){window.swiper.autoplay.start()})}}}}()</script><script src="https://cdn.jsdelivr.net/npm/hexo-shoka-swiper@0.1.8/lib/swiper.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-shoka-swiper@0.1.8/lib/swiper_init.js"></script><script>"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js?t=1781456792182").then(function(){console.log("ServiceWorker Register Successfully.")})["catch"](function(e){console.error(e)})</script></body></html><!-- rebuild by hrmmi -->

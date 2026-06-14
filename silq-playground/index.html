@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="format-detection" content="telphone=no,email=no">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Silq Quantum Playground</title>
+    <link href="https://cdn.jsdelivr.net/npm/prism-theme-one-dark@1.0.0/prism-onedark.min.css" rel="stylesheet"/>
+    <style>
+      body {
+        background: #282c34;
+        padding: 40px;
+        font-family: system-ui, sans-serif;
+      }
+
+      .code-toolbar {
+        position: relative;
+        margin: 24px 0;
+        border-radius: 8px;
+      }
+
+      /* ========== 编辑区 ========== */
+      .code-editor {
+        position: relative;
+        max-height: 420px;
+      }
+
+      .code-editor pre {
+        margin: 0;
+        padding: 16px 20px;
+        font-family: "Fira Code", "Consolas", "Monaco", monospace;
+        font-size: 14px;
+        line-height: 1.5;
+        white-space: pre;
+        word-wrap: normal;
+        tab-size: 2;
+        overflow: auto;
+        border-radius: 8px 8px 0 0;
+        box-sizing: border-box;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .code-editor pre::-webkit-scrollbar {
+        display: none;
+      }
+
+      .code-editor textarea {
+        position: absolute;
+        inset: 0;
+        margin: 0;
+        padding: 16px 20px;
+        font-family: "Fira Code", "Consolas", "Monaco", monospace;
+        font-size: 14px;
+        /* line-height: 1.6; */
+        white-space: pre;
+        word-wrap: normal;
+        tab-size: 2;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        resize: none;
+        overflow: auto;
+        z-index: 2;
+        border-radius: 8px 8px 0 0;
+        background: transparent;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        caret-color: #61afef;
+        caret-shape: block;
+      }
+
+      .code-editor textarea::selection {
+        background: rgba(97, 175, 239, 0.25);
+      }
+
+      .code-editor:focus-within {
+        box-shadow: 0 0 0 2px rgba(97, 175, 239, 0.5);
+        border-radius: 8px 8px 0 0;
+      }
+
+      /* ========== 三角运行按钮 ========== */
+      .run-code-btn {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 6px;
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        padding: 0;
+        outline: none;
+        backdrop-filter: blur(4px);
+      }
+
+      .run-code-btn:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+
+      .run-code-btn:not(:disabled):hover {
+        background: #61afef;
+        border-color: #61afef;
+        box-shadow: 0 0 14px rgba(97, 175, 239, 0.45);
+      }
+
+      /* 三角 ▸ */
+      .run-code-btn::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 0 7px 12px;
+        border-color: transparent transparent transparent #abb2bf;
+        margin-left: 1px;
+        transition: border-color 0.2s;
+      }
+      .run-code-btn:not(:disabled):hover::after {
+        border-color: transparent transparent transparent #fff;
+      }
+
+      /* 运行中：转圈 */
+      .run-code-btn.running::after {
+        display: none;
+      }
+      .run-code-btn.running {
+        pointer-events: none;
+        background: transparent;
+        border-color: rgba(229, 192, 123, 0.5);
+      }
+      .run-code-btn.running::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border: 2px solid #e5c07b;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 0.6s linear infinite;
+      }
+
+      .run-code-btn.done {
+        background: #98c379;
+        border-color: #98c379;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* ========== 输出区域 ========== */
+      .code-output {
+        display: none;
+        margin: 0;
+        padding: 14px 20px;
+        background: #21252b;
+        color: #abb2bf;
+        font-family: "Fira Code", "Consolas", monospace;
+        font-size: 13.5px;
+        line-height: 1.6;
+        border-radius: 0 0 8px 8px;
+        border: 1px solid #3a3f4b;
+        border-top: none;
+        white-space: pre-wrap;
+        word-break: break-all;
+        max-height: 240px;
+        overflow-y: auto;
+      }
+      .code-output.show {
+        display: block;
+      }
+      .code-output.success {
+        border-color: #98c379;
+      }
+      .code-output.error {
+        border-color: #e06c75;
+        color: #e06c75;
+      }
+
+      /* ========== WASM 加载状态 ========== */
+      .wasm-status {
+        color: #e5c07b;
+        font-size: 12px;
+        margin-bottom: 12px;
+        font-family: system-ui, sans-serif;
+      }
+      .wasm-status.ready {
+        color: #98c379;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="color: #abb2bf; margin-bottom: 8px">⚛ Silq WASM · 在线运行</h2>
+    <div class="wasm-status" id="wasmStatus">⏳ 加载 WASM 模块中…</div>
+
+    <!-- ========== 示例 1：基础量子 ========== -->
+    <div class="code-toolbar" style="margin-top: 20px">
+      <div class="code-editor">
+        <pre>
+          <code class="language-silq">
+          def main() {
+            x := 0: 𝔹;            // ✅ 第一步：分配量子比特 x，初始化为 |0⟩
+            x := H(x);            // ✅ 第二步：对量子变量 x 施加 Hadamard 门
+            return measure(x);    // 测量并返回结果
+          }
+          </code>
+        </pre>
+        <textarea spellcheck="false"></textarea>
+      </div>
+      <button class="run-code-btn" title="运行 Silq 代码 (Ctrl+Enter)  ·  Shift+点击查看 Dump" disabled></button>
+      <pre class="code-output"><code></code></pre>
+    </div>
+
+    <!-- ========== 示例 2：纠缠态 ========== -->
+    <div class="code-toolbar">
+      <div class="code-editor">
+        <pre>
+          <code class="language-silq">
+          def main() {
+            a := 0: 𝔹;
+            b := 0: 𝔹;
+            a := H(a);
+            b := X(b);
+            CNOT(a, b);                          // 替代 if a { b := X(b); }
+            return (measure(a), measure(b));
+          }
+          </code>
+        </pre>
+        <textarea spellcheck="false"></textarea>
+      </div>
+      <button class="run-code-btn" title="运行 Silq 代码 (Ctrl+Enter)  ·  Shift+点击查看 Dump" disabled></button>
+      <pre class="code-output"><code></code></pre>
+    </div>
+
+    <!-- ========== 示例 3：Grover 迭代 ========== -->
+    <div class="code-toolbar">
+      <div class="code-editor">
+        <pre>
+          <code class="language-silq">
+          def main() {
+            // 分配 3 个量子比特
+            q0 := 0: 𝔹;
+            q1 := 0: 𝔹;
+            q2 := 0: 𝔹;
+
+            // 叠加态
+            q0 := H(q0);
+            q1 := H(q1);
+            q2 := H(q2);
+
+            // Oracle: 标记 |110⟩（q0=1, q1=1, q2=0）
+            // 由于没有量子 if/索引，Oracle 需要手动用门电路实现
+            X(q2);                     // 翻转 q2: |110⟩ → |111⟩
+            // CPHASE 或其他多比特相位门也不支持...
+
+            return (measure(q0), measure(q1), measure(q2));
+          }
+          </code>
+        </pre>
+        <textarea spellcheck="false"></textarea>
+      </div>
+      <button class="run-code-btn" title="运行 Silq 代码 (Ctrl+Enter)  ·  Shift+点击查看 Dump" disabled></button>
+      <pre class="code-output"><code></code></pre>
+    </div>
+
+    <!-- PrismJS 核心 -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.js"></script>
+
+    <!-- Silq 语法高亮定义 -->
+    <script src="./prism-silq.js"></script>
+
+    <!-- Silq WASM 运行器 -->
+    <script type="module">
+      import init, { run_silq, run_silq_dump } from "./silq.js";
+
+      // ========== WASM 初始化 ==========
+      const statusEl = document.getElementById("wasmStatus");
+      const allBtns = document.querySelectorAll(".run-code-btn");
+
+      try {
+        await init();
+        statusEl.textContent = "✓ WASM 模块就绪";
+        statusEl.className = "wasm-status ready";
+        allBtns.forEach((b) => (b.disabled = false));
+      } catch (err) {
+        statusEl.textContent = "✗ WASM 加载失败: " + err.message;
+        statusEl.style.color = "#e06c75";
+      }
+
+      // ========== 绑定所有代码块 ==========
+      document.querySelectorAll(".code-toolbar").forEach((toolbar) => {
+        const editor = toolbar.querySelector(".code-editor");
+        const pre = editor.querySelector("pre");
+        const codeEl = pre.querySelector("code");
+        const textarea = editor.querySelector("textarea");
+        const runBtn = toolbar.querySelector(".run-code-btn");
+        const output = toolbar.querySelector(".code-output");
+        const outputCode = output.querySelector("code");
+
+        // 初始同步
+        textarea.value = codeEl.textContent;
+
+        // 输入 → 高亮
+        textarea.addEventListener("input", () => {
+          codeEl.textContent = textarea.value;
+          Prism.highlightElement(codeEl);
+        });
+
+        // 滚动同步
+        textarea.addEventListener("scroll", () => {
+          pre.scrollTop = textarea.scrollTop;
+          pre.scrollLeft = textarea.scrollLeft;
+        });
+
+        // Tab 缩进
+        textarea.addEventListener("keydown", (e) => {
+          if (e.key === "Tab") {
+            e.preventDefault();
+            const s = textarea.selectionStart;
+            const ed = textarea.selectionEnd;
+            textarea.value =
+              textarea.value.slice(0, s) + "  " + textarea.value.slice(ed);
+            textarea.selectionStart = textarea.selectionEnd = s + 2;
+            textarea.dispatchEvent(new Event("input"));
+          }
+          if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
+            e.preventDefault();
+            runBtn.click();
+          }
+        });
+
+        // ========== 运行按钮 ==========
+        runBtn.addEventListener("click", async (e) => {
+          const code = textarea.value.trim();
+          if (!code) return;
+
+          if (runBtn.disabled) return;
+
+          const useDump = e.shiftKey; // Shift+点击 → run_silq_dump
+
+          runBtn.classList.add("running");
+          const title = runBtn.title;
+          runBtn.title = useDump ? "执行中 (dump 模式)…" : "执行中…";
+
+          await new Promise((r) => setTimeout(r, 80));
+
+          try {
+            const result = useDump ? run_silq_dump(code) : run_silq(code);
+            outputCode.textContent = result;
+            output.className = "code-output success show";
+            runBtn.classList.add("done");
+          } catch (err) {
+            outputCode.textContent = "✗ " + (err.message || err);
+            output.className = "code-output error show";
+          } finally {
+            runBtn.classList.remove("running");
+            runBtn.title = title;
+            setTimeout(() => runBtn.classList.remove("done"), 1000);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

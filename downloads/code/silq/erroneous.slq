@@ -1,0 +1,6 @@
+//example of erroneous code
+def main() {
+    x:=0:B;
+    y:=H(x);
+    return measure(y);
+}

@@ -1,0 +1,20 @@
+\documentclass[margin=0pt, tikz, convert, convert={outext=.svg, command=\unexpanded{
+  % pdf2svg \infile\space \outfile
+  pdfcrop \infile\space \infile && pdftocairo -svg \infile
+}}]{standalone}
+%\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\begin{document}
+\pagestyle{empty}
+\begin{equation}
+\feynmandiagram[inline=(a.base), horizontal=a to b]{
+  a [particle=$\nu;\;b$] -- [gluon, momentum'=$p$] b,
+  c [particle=$\mu;\;a$] -- [gluon, momentum'=$k$] b,
+  d [particle=$\rho;\;c$] -- [gluon, momentum'=$q$] b,
+};
+\;=gf^{abc}\left[g^{\mu\nu}(k-p)^{\rho}+g^{\nu\rho}(p-q)^{\mu}+g^{\rho\mu}(q-k)^{\nu}\right]\notag
+\end{equation}
+\end{document}

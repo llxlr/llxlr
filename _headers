@@ -1,0 +1,19 @@
+/secure/page
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+
+/js/*
+  Access-Control-Allow-Origin: *
+  X-Robots-Tag: nosnippet
+
+/css/*
+  Access-Control-Allow-Origin: *
+  X-Robots-Tag: nosnippet
+
+/images/*
+  Access-Control-Allow-Origin: *
+  X-Robots-Tag: nosnippet
+
+https://white-album.top/*
+  X-Robots-Tag: all

@@ -1,0 +1,3 @@
+def classicalExample(x:!𝔹,f:!𝔹!→!𝔹) {
+  return f(x);  //  ^ f is classical
+}

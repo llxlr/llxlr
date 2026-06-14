@@ -1,0 +1,10 @@
+def captureQuantum(x:𝔹) {
+  captured := λ(). {  // function `captured` takes no arguments
+    return H(x);  // the body of function `captured` applies `H` to `x`
+  };
+  return captured:𝟙→𝔹;  // ^ the returned function is not classical
+}
+
+def main() {
+  measure(captureQuantum(1:𝔹));
+}
